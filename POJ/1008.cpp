@@ -91,7 +91,7 @@ public:
 	}
 };
 
-int main() {
+int POJ1008() {
 	map m;
 	int i, n, day, year, days;
 	char *month = new char[32];
