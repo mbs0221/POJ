@@ -20,11 +20,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="标头.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="3820.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -50,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="1007.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1008.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
