@@ -7,15 +7,15 @@
 #include <string.h>
 
 int n, max, sum, num, length, sticks[64], visited[64];
-int result;
+int flag;
 
 void DFS(int nlength, int count, int current) {
 	int i;
 	if (count == num) {
-		result = 1;
+		flag = 1;
 		return;
 	}
-	if (result) {
+	if (flag) {
 		return;
 	}
 	for (i = current; i < n; i++) {
@@ -30,7 +30,7 @@ void DFS(int nlength, int count, int current) {
 				// 没有凑够length长度
 				DFS(nlength + sticks[i], count, i + 1);
 				visited[i] = 0;
-				if (nlength == 0 || result) {
+				if (nlength == 0 || flag) {
 					return;
 				}
 			}
@@ -68,13 +68,13 @@ int POJ1011() {
 			visited[i] = 0;
 		}
 		// DFS
-		result = 0;
+		flag = 0;
 		for (i = sticks[0]; i <= sum; i++) {
 			if (sum % i == 0) {
 				length = i;// 从最长棍子长度开始搜索
 				num = sum / i;// 棍子总数为sum/i;
 				DFS(0, 0, 0);
-				if (result) {
+				if (flag) {
 					break;
 				}
 			}
